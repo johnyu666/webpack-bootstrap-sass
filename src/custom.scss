@@ -1,0 +1,7 @@
+// 自定义sass主题
+$theme-colors: (
+  "primary": #135017,
+  "danger": #ff4136
+);
+
+@import "~bootstrap/scss/bootstrap";
