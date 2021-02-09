@@ -1,5 +1,21 @@
+const path=require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
+//htmlPlugin的配置信息
+let htmlPluginOptions = {}
+htmlPluginOptions.title = '由HtmlWebpackPlugin生成的网页';
+htmlPluginOptions.template = "./src/template.html";
+htmlPluginOptions.info = '自定义信息';
+
+
 module.exports={
     mode:'development',
+    devServer: {
+        contentBase: path.join(__dirname, 'dist'),
+        compress: true,
+        port: 9000,
+        open: true
+      },
     module:{
         rules:[
             {
@@ -34,5 +50,6 @@ module.exports={
                 }
             }
         ]
-    }
+    },
+    plugins: [new HtmlWebpackPlugin(htmlPluginOptions)]
 }

@@ -4,7 +4,7 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack serve"
   },
   "keywords": [],
   "author": "",
@@ -14,12 +14,16 @@
     "css-loader": "^5.0.2",
     "expose-loader": "^2.0.0",
     "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.0.0",
     "postcss": "^8.2.5",
     "postcss-loader": "^5.0.0",
     "sass": "^1.32.6",
     "sass-loader": "^11.0.1",
     "style-loader": "^2.0.0",
-    "url-loader": "^4.1.1"
+    "url-loader": "^4.1.1",
+    "webpack": "^5.21.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
     "bootstrap": "^4.6.0",
