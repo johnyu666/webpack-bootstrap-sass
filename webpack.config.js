@@ -20,7 +20,19 @@ module.exports={
                 }, {
                   loader: 'sass-loader' // compiles Sass to CSS
                 }]
-              }
+              },
+              {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
+              },
+              {
+                test: /(\.woff2$)|(\.woff$)/,
+                loader: 'url-loader',
+                options: {
+                    limit: 50000,
+                    name: "./fonts/[name].[ext]" //当大于50K启用file-loader时，指定输出目录及文件名称（否则将产生随机名称）
+                }
+            }
         ]
     }
 }
